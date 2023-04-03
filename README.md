@@ -10,7 +10,7 @@
     mydb = client["Telephone_Directory"]
     mycol = mydb['User_Datas']
 
-#1. INSERT documents into MongoDB:
+1.  INSERT documents into MongoDB:
 
 #Inserting one record into the collection:
 
