@@ -10,7 +10,7 @@
     mydb = client["Telephone_Directory"]
     mycol = mydb['User_Datas']
 
-1.  INSERT documents into MongoDB:
+1. INSERT documents into MongoDB:
 
 #Inserting one record into the collection:
 
@@ -31,7 +31,7 @@
         print(i)
 
 
-#2. READ documents from MongoDB:
+2. READ documents from MongoDB:
 
 #Reading all the documents from collection:
 
@@ -44,7 +44,7 @@
         print(i)
 
 
-#3. UPDATE documents in MongoDB:
+3. UPDATE documents in MongoDB:
 
 #Updating one document in the collection:
 
@@ -63,7 +63,7 @@
         print(i)
 
 
-#4. DELETE documents in MongoDB:
+4. DELETE documents in MongoDB:
 
 #Delete one document in a collection:
 
