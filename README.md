@@ -10,15 +10,15 @@
     mydb = client["Telephone_Directory"]
     mycol = mydb['User_Datas']
 
-#1.INSERT documents into MongoDB:
+#1. INSERT documents into MongoDB:
 
-# Inserting one record into the collection:
+#Inserting one record into the collection:
 
     mycol.insert_one({"Name": 'ABC', "Phone No": 123456789, "Place": 'Chennai'})
     for i in mycol.find():
         print(i)
 
-# Inserting Multiple records into the collection:
+#Inserting Multiple records into the collection:
 
     mycol.insert_many([{"Name": 'DEF', "Phone No": 456789123, "Place": 'Delhi'},
                        {"Name": 'ADC', "Phone No": 789123456, "Place": 'Mumbai'},
@@ -31,22 +31,22 @@
         print(i)
 
 
-#2.READ documents from MongoDB:
+#2. READ documents from MongoDB:
 
-# Reading all the documents from collection:
+#Reading all the documents from collection:
 
     for i in mycol.find():
         print(i)
 
-# Reading specific documents from collection:
+#Reading specific documents from collection:
 
     for i in mycol.find({'Name': 'DEF'}):
         print(i)
 
 
-#3.UPDATE documents in MongoDB:
+#3. UPDATE documents in MongoDB:
 
-# Updating one document in the collection:
+#Updating one document in the collection:
 
     query = {"Place": 'Chennai'}
     update = {"$set": {'Phone No': 11111111}}
@@ -54,7 +54,7 @@
     for i in mycol.find():
         print(i)
 
-# Updating multiple documents in the collection:
+#Updating multiple documents in the collection:
 
     query= {'Name': 'ABC'}
     update= {"$set": {'Phone No': 222222222}}
@@ -63,15 +63,15 @@
         print(i)
 
 
-#4.DELETE documents in MongoDB:
+#4. DELETE documents in MongoDB:
 
-# Delete one document in a collection:
+#Delete one document in a collection:
 
     mycol.delete_one({"Name": "ABC"})
     for i in mycol.find():
         print(i)
 
-# Delete multiple documents in a collection:
+#Delete multiple documents in a collection:
 
     mycol.delete_many({"Name": "ABC"})
     for i in mycol.find():
